@@ -1,6 +1,6 @@
 <?php 
 //	$db = mysqli_connect('localhost', 'root', '', 'crud');
-	$con = mysqli_connect("localhost","root","","cloud_travel");
+	$con = mysqli_connect("localhost","cloud","cloud@123","cloud");
 	// initialize variables
 	$message = "";
 	
