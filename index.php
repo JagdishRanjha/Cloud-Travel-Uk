@@ -52,7 +52,7 @@ function hide() {
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>C</b>T</span>
       <!-- logo for regular state and mobile devices -->
@@ -498,7 +498,7 @@ function hide() {
 						$sql3 = "select sum(expense_amount) from daily_expense ";
 						$result3 = mysqli_query($con,$sql3);
 						$row3 = mysqli_fetch_array($result3);
-						echo '$' . $row3['sum(expense_amount)'];
+						echo '&pound; ' . $row3['sum(expense_amount)'];
 						?></b></span>
 
                     <div class="progress sm">
@@ -532,7 +532,7 @@ function hide() {
                 <div class="col-sm-3 col-xs-6">
                   <div class="description-block border-right">
                     <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 17%</span>
-                    <h5 class="description-header">$35,210.43</h5>
+                    <h5 class="description-header">&pound; 35,210.43</h5>
                     <span class="description-text">TOTAL REVENUE</span>
                   </div>
                   <!-- /.description-block -->
@@ -737,38 +737,24 @@ function hide() {
                 <table class="table no-margin">
                   <thead>
                   <tr>
-                    <th>Order ID</th>
-                    <th>Item</th>
+                    <th>Id</th>
+                    <th>Name</th>
                     <th>Status</th>
-                    <th>Popularity</th>
+
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
                     <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="label label-success">Shipped</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                    </td>
+                    <td>John Doe</td>
+                    <td><span class="label label-success">Paid</span></td>
                   </tr>
                   <tr>
                     <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                    <td>Samsung Smart TV</td>
+                    <td>Marry</td>
                     <td><span class="label label-warning">Pending</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                    </td>
                   </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>iPhone 6 Plus</td>
-                    <td><span class="label label-danger">Delivered</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
+                    <tr>
                     <td><a href="pages/examples/invoice.html">OR7429</a></td>
                     <td>Samsung Smart TV</td>
                     <td><span class="label label-info">Processing</span></td>
@@ -776,30 +762,8 @@ function hide() {
                       <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
                     </td>
                   </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="label label-warning">Pending</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>iPhone 6 Plus</td>
-                    <td><span class="label label-danger">Delivered</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="label label-success">Shipped</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                    </td>
-                  </tr>
+
+
 
                   </tbody>
                 </table>
@@ -808,8 +772,8 @@ function hide() {
             </div>
             <!-- /.box-body -->
             <div class="box-footer clearfix">
-              <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-              <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+              <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Generate New Invoice</a>
+              <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Invoice</a>
             </div>
             <!-- /.box-footer -->
           </div>
