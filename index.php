@@ -1,5 +1,5 @@
 <?php 
-	$con = mysqli_connect("localhost","root","","cloud_travel");
+	$con = mysqli_connect("localhost","cloud","cloud@123","cloud");
 	$results = mysqli_query($con, "SELECT * FROM messages");
 ?>
 <!DOCTYPE html>
