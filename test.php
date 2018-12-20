@@ -1,6 +1,10 @@
-<?php 
+<?php
+//    require_once ("script/pdocrud.php");
+require_once "script/pdocrud.php";
+    include_once ("script/pdocrud.php");
 	$con = mysqli_connect("localhost","vineet","vineet","cloud");
-	$results = mysqli_query($con, "SELECT * FROM airline_register");
+	$results = mysqli_query($con, "SELECT * FROM daily_expense");
+
 ?>
 <!DOCTYPE html>
 <style>
@@ -18,7 +22,7 @@ function hide() {
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Airline Entry</title>
+  <title>Expenses Entry</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -361,7 +365,7 @@ function hide() {
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Airline Entry</li>
+        <li class="active">Daily Expenses</li>
       </ol>
     </section>
 
@@ -373,7 +377,7 @@ function hide() {
         <div class="col-md-12">
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Airline Entry</h3>
+              <h3 class="box-title">Daily Expense Entry</h3>
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
@@ -395,45 +399,9 @@ function hide() {
             <div class="box-body">
               <div class="row">
                 <div class="col-md-12">
-                  <form class="form" id="userForm" method="post" action="core/add_air.php">
-				
-					<div class = "row">
-					
-				
-						<div class = "col-lg-3">
-                    <div class="form-group">
-                        <input  type="text" placeholder="Airline Name" class="form-control" name="airline" id="airline"/>
-                    </div>
-					</div>
-				<div class = "col-lg-3">
-                    <button class="btn btn-success" name="submit" type="submit">Add</button>
-					</div>
-                </form>
-					   <div class="box-body">
-              <table id="table" class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                  <th>Sr.No</th>
-                  <th>Airline Name</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-					<?php while ($row = mysqli_fetch_array($results)) { ?>
-                  <td><?php echo $row['id']; ?></td>
-                  <td><?php echo $row['airline_name']; ?></td>
-			
-				
-			<td>
-				<a href="server.php?del=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
-			</td>
-                </tr>
-                <?php } ?>
-                
-					
-                  
-              </table>
-            </div>
+                    <?php
+                    $pdocrud = new PDOCrud();
+                    echo $pdocrud->dbTable("daily_expense")->render();  ?>
                   <!-- /.chart-responsive -->
                 </div>
                 <!-- /.col -->

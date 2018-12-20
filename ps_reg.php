@@ -1,5 +1,5 @@
 <?php 
-	$con = mysqli_connect("localhost","root","","cloud");
+	$con = mysqli_connect("localhost","vineet","vineet","cloud");
 	$results = mysqli_query($con, "SELECT * FROM service_register");
 ?>
 <!DOCTYPE html>

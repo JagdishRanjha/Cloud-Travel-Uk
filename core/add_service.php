@@ -1,6 +1,6 @@
 <?php 
 //	$db = mysqli_connect('localhost', 'root', '', 'crud');
-	$con = mysqli_connect("localhost","root","","cloud");
+	$con = mysqli_connect("localhost","vineet","vineet","cloud");
 	// initialize variables
 	$service = "";
 	
