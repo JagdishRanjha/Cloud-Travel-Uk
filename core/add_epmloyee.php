@@ -1,6 +1,6 @@
 <?php 
 //	$db = mysqli_connect('localhost', 'root', '', 'crud');
-	$con = mysqli_connect("localhost","cloud","cloud@123","cloud");
+	$con = mysqli_connect("localhost","root","","cloud");
 	// initialize variables
 			$name = "";
 			$middle_name = "";
@@ -42,6 +42,9 @@
 			$tax_no = "";
 			$national_insurance_no = "";
 			$employee_id = "";
+
+
+echo $name;
 	if (isset($_POST['submit'])) {
 			$name = $_POST['name'];
 			$middle_name = $_POST['middle_name'];
@@ -82,10 +85,15 @@
 			$bank_address = $_POST['bank_address'];
 			$tax_no = $_POST['tax_no'];
 			$national_insurance_no = $_POST['nat_ins_no'];
-			$employee_id = "CLDTRVL";
+//			$temp_id = "CT00" . (rand(111111,999999));
+			$employee_id = "CT00" .(rand(111111,999999));
+//            $query = "SELECT employee_id FROM employee WHERE employee_id=" . $temp_id;
+//            $results = mysqli_query($con, $query);   
+//            $row = mysqli_fetch_array($results);
+//            echo$row
+     
 			
 		
-		mysqli_query($con, "INSERT INTO employee(employee_id, name, middle_name, surname, father_name, mother_name, passport, visa, visa_valid, dob, gender, marital_status, country, disability, blood, permanent_address, temporary_address, home_phone, mobile_phone, fax, email, qualification, experience, department, hired_department, hiring_date, currency, rate, per, contact_name, contact_address, contact_phone, contact_email, relation, sort_code, account_no, bank_name, bank_address, tax_no, national_insurance_no, status) VALUES ('$employee_id','$name', '$middle_name', '$surname', '$father_name', '$mother_name', '$passport', '$visa', '$visa_valid', '$dob', '$gender', '$marital_status', '$country', '$disability', '$blood', '$permanent_address', '$temporary_address', '$home_phone', '$mobile_phone', '$fax', '$email', '$qualification', '$experience', '$department', '$hired_department', '$hiring_date', '$currency', '$rate', '$per', '$contact_name', '$contact_address', '$contact_phone', '$contact_email', '$relation', '$sort_code', '$account_no', '$bank_name', '$bank_address', '$tax_no', '$national_insurance_no')"); 
-		 echo "Success";
+		mysqli_query($con, "INSERT INTO employee(employee_id, name, middle_name, surname, father_name, mother_name, passport, visa, visa_valid, dob, gender, marital_status, country, disability, blood, permanent_address, temporary_address, home_phone, mobile_phone, fax, email, qualification, experience, department, hired_department, hiring_date, currency, rate, per, contact_name, contact_address, contact_phone, contact_email, relation, sort_code, account_no, bank_name, bank_address, tax_no, national_insurance_no) VALUES ('$employee_id','$name', '$middle_name', '$surname', '$father_name', '$mother_name', '$passport', '$visa', '$visa_valid', '$dob', '$gender', '$marital_status', '$country', '$disability', '$blood', '$permanent_address', '$temporary_address', '$home_phone', '$mobile_phone', '$fax', '$email', '$qualification', '$experience', '$department', '$hired_department', '$hiring_date', '$currency', '$rate', '$per', '$contact_name', '$contact_address', '$contact_phone', '$contact_email', '$relation', '$sort_code', '$account_no', '$bank_name', '$bank_address', '$tax_no', '$national_insurance_no')");		 
 		header('location: ../emp_reg.php');
 	}

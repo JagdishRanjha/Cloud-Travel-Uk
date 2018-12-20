@@ -1,5 +1,5 @@
 <?php 
-	$con = mysqli_connect("localhost","cloud","cloud@123","cloud");
+	$con = mysqli_connect("localhost","root","","cloud");
 	$results = mysqli_query($con, "SELECT * FROM service_register");
 ?>
 <!DOCTYPE html>
@@ -340,7 +340,7 @@ function hide() {
 		  <li><a href="emp_reg.php" id="new"><i class="fa fa-pencil-square-o"></i> <span>Employee Registration</span></a></li>
 		  <li><a href="cli_reg.php"><i class="fa fa-user-circle"></i> <span>Client Registration</span></a></li>
 		  <li><a href="ps_reg.php"><i class="fa fa-plus-square"></i> <span>Project and Services Registration</span></a></li>
-		  <li><a href="#"><i class="fa fa-plane"></i> <span>Air Lines Name Registration</span></a></li>
+		  <li><a href="air_ent.php"><i class="fa fa-plane"></i> <span>Air Lines Name Registration</span></a></li>
 		  <li><a href="#"><i class="fa fa-paperclip"></i> <span>Invoice Generation</span></a></li>
 		  <li><a href="#"><i class="fa fa-wrench"></i> <span>Staff Wage Management</span></a></li>
 		  <li><a href="exp_ent.php"><i class="fa fa-money"></i> <span>Daily Expense Entry</span></a></li>
@@ -398,7 +398,7 @@ function hide() {
 					
 				<div class = "col-lg-8">
                     <div class="form-group">
-                        <input  type="text" placeholder="Service Name" class="form-control" name="service" id="service"/>
+                        <input  type="text" placeholder="Service Name" class="form-control" required name="service" id="service"/>
                     </div>
 					</div>
 				<div class = "col-lg-4">

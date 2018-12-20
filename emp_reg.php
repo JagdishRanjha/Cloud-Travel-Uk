@@ -1,5 +1,5 @@
 <?php 
-	$con = mysqli_connect("localhost","cloud","cloud@123","cloud");
+	$con = mysqli_connect("localhost","root","","cloud");
 	$results = mysqli_query($con, "SELECT * FROM employee");
 ?>
 <!DOCTYPE html>
@@ -340,7 +340,7 @@ function hide() {
 		  <li><a href="emp_reg.php" id="new"><i class="fa fa-pencil-square-o"></i> <span>Employee Registration</span></a></li>
 		  <li><a href="cli_reg.php"><i class="fa fa-user-circle"></i> <span>Client Registration</span></a></li>
 		  <li><a href="ps_reg.php"><i class="fa fa-plus-square"></i> <span>Project and Services Registration</span></a></li>
-		  <li><a href="#"><i class="fa fa-plane"></i> <span>Air Lines Name Registration</span></a></li>
+		  <li><a href="air_ent.php"><i class="fa fa-plane"></i> <span>Air Lines Name Registration</span></a></li>
 		  <li><a href="#"><i class="fa fa-paperclip"></i> <span>Invoice Generation</span></a></li>
 		  <li><a href="#"><i class="fa fa-wrench"></i> <span>Staff Wage Management</span></a></li>
 		  <li><a href="exp_ent.php"><i class="fa fa-money"></i> <span>Daily Expense Entry</span></a></li>
@@ -402,37 +402,37 @@ function hide() {
 				<div class = "col-lg-4">
                     <div class="form-group">
                         <label>First Name</label>
-                        <input  type="text" class="form-control" name="name" id="name"/>
+                        <input  type="text" class="form-control" required name="name" id="name"/>
                     </div>
 					</div>
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Middle Name</label>
-                        <input type="text" class="form-control" name="middle_name" id="middle_name"/>
+                        <input type="text" class="form-control" required name="middle_name" id="middle_name"/>
                     </div>
 					</div>
 						<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Last Name</label>
-                        <input type="text" class="form-control" name="surname" id="surname"/>
+                        <input type="text" class="form-control" required name="surname" id="surname"/>
                     </div>
 					</div>
 					<div class = "col-lg-6">
                     <div class="form-group">
                         <label>Father's Name</label>
-                        <input type="text" class="form-control" name="father_name" id="father_name"/>
+                        <input type="text" class="form-control" required name="father_name" id="father_name"/>
                     </div>
 					</div>
 					<div class = "col-lg-6">
                     <div class="form-group">
                         <label>Mother's Name</label>
-                        <input type="text" class="form-control" name="mother_name" id="mother_name"/>
+                        <input type="text" class="form-control" required name="mother_name" id="mother_name"/>
                     </div>
 					</div>
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Gender</label>
-                        <select class="form-control" name="gender" id="gender">
+                        <select class="form-control" required name="gender" id="gender">
 						<option value =""> ----Select Gender---- </option>
 						<option value ="Female">Female </option>
 						<option value ="Male"> Male</option>
@@ -443,13 +443,13 @@ function hide() {
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Date Of Birth</label>
-                        <input type="date" class="form-control" name="dob" id="dob"/>
+                        <input type="date" class="form-control" required name="dob" id="dob"/>
                     </div>
 					</div>
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Marital Status</label>
-                        <select class="form-control" name="marital_status" id="marital_status">
+                        <select class="form-control" required name="marital_status" id="marital_status">
 						<option value=""> ----Select Status---- </option>
 						<option value="Married"> Married </option>
 						<option value="Unmarried"> Unmarried </option>
@@ -467,7 +467,7 @@ function hide() {
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Blood Group</label>
-                        <select class="form-control" name="blood" id="blood">
+                        <select class="form-control" required name="blood" id="blood">
 						<option value=""> -----Select One----</option>
     <option value="A+">A+</option>
     <option value="A-">A-</option>
@@ -488,7 +488,7 @@ function hide() {
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Country</label>
-                        <select class="form-control" name="country" id="country">
+                        <select class="form-control" required name="country" id="country">
   <option value="">-- select one --</option>
  <option value="United States">United States</option> 
 <option value="United Kingdom">United Kingdom</option> 
@@ -737,19 +737,19 @@ function hide() {
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Passport</label>
-                        <input type="text" class="form-control" name="passport" id="passport"/>
+                        <input type="text" class="form-control" required ame="passport" id="passport"/>
                     </div>
 					</div>
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Visa</label>
-                        <input type="text" class="form-control" name="visa" id="visa"/>
+                        <input type="text" class="form-control" required name="visa" id="visa"/>
                     </div>
 					</div>
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Visa Valid upto</label>
-                        <input type="date" class="form-control" name="visa_valid" id="visa_valid"/>
+                        <input type="date" class="form-control" required name="visa_valid" id="visa_valid"/>
                     </div>
 					</div>
 					</div>
@@ -759,19 +759,19 @@ function hide() {
 				<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Permanent Home Address</label>
-                        <input type="text" class="form-control" name="permanent_address" id="permanent_address"/>
+                        <input type="text" class="form-control" required name="permanent_address" id="permanent_address"/>
                     </div>
 					</div>
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Temporary Home Address</label>
-                        <input type="text" class="form-control" name="temporary_address" id="temporary_address"/>
+                        <input type="text" class="form-control" required name="temporary_address" id="temporary_address"/>
                     </div>
 					</div>
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Home Phone</label>
-                        <input type="text" class="form-control" name="home_phone" id="home_phone"/>
+                        <input type="text" class="form-control" required name="home_phone" id="home_phone"/>
                     </div>
 					</div>
 					<div class = "col-lg-4">
@@ -791,7 +791,7 @@ function hide() {
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="text" class="form-control" name="email" id="email"/>
+                        <input type="text" class="form-control" required name="email" id="email"/>
                     </div>
 					</div>
 					
@@ -802,41 +802,41 @@ function hide() {
 				<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Qualification</label>
-                        <input type="text" class="form-control" name="qualification" id="qualification"/>
+                        <input type="text" class="form-control" required name="qualification" id="qualification"/>
                     </div>
 					</div>
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Experience</label>
-                        <input type="text" class="form-control" name="experience" id="experience"/>
+                        <input type="text" class="form-control" required name="experience" id="experience"/>
                     </div>
 					</div>
 				
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Experience In : Department</label>
-                        <input type="text" class="form-control" name="department" id="department"/>
+                        <input type="text" class="form-control" required name="department" id="department"/>
                     </div>
 					</div>
 					<div class = "col-lg-3">
                     <div class="form-group">
                         <label>Hired For : Department</label>
-                        <input type="text" class="form-control" name="hired_department" id="hired_department"/>
+                        <input type="text" class="form-control" required name="hired_department" id="hired_department"/>
                     </div>
 					</div>
 					<div class = "col-lg-3">
                     <div class="form-group">
                         <label>Hiring Date</label>
-                        <input type="date" class="form-control" name="hiring_date" id="hiring_date"/>
+                        <input type="date" class="form-control" required name="hiring_date" id="hiring_date"/>
                     </div>
 					</div>
 					<div class = "col-lg-2">
                     <div class="form-group">
                         <label>Currency</label>
-                        <select  class="form-control" name="currency" id="currency">
-						<option value=""> Select </option>
+                        <select  class="form-control" required name="currency" id="currency">
+                        <option value="<?php echo "&pound;";?>"> &pound  </option>
 						<option value="$"> $ </option>
-						<option value="<?php echo "&pound;";?>"> &pound  </option>
+						
 </select>
 						
                     </div>
@@ -844,13 +844,13 @@ function hide() {
 					<div class = "col-lg-2">
                     <div class="form-group">
                         <label>Rate Contract </label>
-                        <input type="text" class="form-control" name="rate" id="rate"/>
+                        <input type="text" class="form-control" required name="rate" id="rate"/>
                     </div>
 					</div>
 					<div class = "col-lg-2">
 					<div class="form-group">
                         <label>Per </label>
-                        <select class="form-control" name="per" id="per">
+                        <select class="form-control" required name="per" id="per">
 						<option value=""> ---Select ---</option>
 						<option value="hour"> Hour </option>
 						<option value="month"> Month </option>
@@ -865,32 +865,32 @@ function hide() {
 				<div class = "col-lg-6">
                     <div class="form-group">
                         <label>Contact Name</label>
-                        <input type="text" class="form-control" name="contact_name" id="contact_name"/>
+                        <input type="text" class="form-control" required name="contact_name" id="contact_name"/>
                     </div>
 					</div>
 					<div class = "col-lg-6">
                     <div class="form-group">
                         <label>Contact Address</label>
-                        <input type="text" class="form-control" name="contact_address" id="contact_address"/>
+                        <input type="text" class="form-control" required name="contact_address" id="contact_address"/>
                     </div>
 					</div>
 					
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Contact Phone No</label>
-                        <input type="text" class="form-control" name="contact_phone" id="contact_phone"/>
+                        <input type="text" class="form-control" required name="contact_phone" id="contact_phone"/>
                     </div>
 					</div>
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Contact Email</label>
-                        <input type="text" class="form-control" name="contact_email" id="contact_email"/>
+                        <input type="text" class="form-control" required name="contact_email" id="contact_email"/>
                     </div>
 					</div>
 					<div class = "col-lg-4">
                     <div class="form-group">
                         <label>Relation</label>
-                        <input type="text" class="form-control" name="relation" id="relation"/>
+                        <input type="text" class="form-control" required name="relation" id="relation"/>
                     </div>
 					</div>
 					</div>
@@ -899,38 +899,38 @@ function hide() {
 					<div class = "col-lg-6">
                     <div class="form-group">
                         <label>SORT Code</label>
-                        <input type="text" class="form-control" name="sort_code" id="sort_code"/>
+                        <input type="text" class="form-control" required name="sort_code" id="sort_code"/>
                     </div>
 					</div>
 				<div class = "col-lg-6">
                     <div class="form-group">
                         <label>Account No</label>
-                        <input type="text" class="form-control" name="account_no" id="account_no"/>
+                        <input type="text" class="form-control" required name="account_no" id="account_no"/>
                     </div>
 					</div>
 					<div class = "col-lg-6">
                     <div class="form-group">
                         <label>Bank Name</label>
-                        <input type="text" class="form-control" name="bank_name" id="bank_name"/>
+                        <input type="text" class="form-control" required name="bank_name" id="bank_name"/>
                     </div>
 					</div>
 				<div class = "col-lg-6">
                     <div class="form-group">
                         <label>Bank Address</label>
-                        <input type="text" class="form-control" name="bank_address" id="bank_address"/>
+                        <input type="text" class="form-control" required name="bank_address" id="bank_address"/>
                     </div>
 					</div>
 						
 						<div class = "col-lg-6">
                     <div class="form-group">
                         <label>Income Tax No.</label>
-                        <input type="text" class="form-control" name="tax_no" id="tax_no"/>
+                        <input type="text" class="form-control" required name="tax_no" id="tax_no"/>
                     </div>
 					</div>
 					<div class = "col-lg-6">
                     <div class="form-group">
                         <label>National Insurance No.</label>
-                        <input type="text" class="form-control" name="nat_ins_no" id="nat_ins_no"/>
+                        <input type="text" class="form-control" required name="nat_ins_no" id="nat_ins_no"/>
                     </div>
 					</div>
 					</div>
@@ -1021,7 +1021,7 @@ function hide() {
                 <?php } ?>
                 <tr>
 					
-                  
+                    </tr>
               </table>
             </div>
                   <!-- /.chart-responsive -->
